@@ -11,9 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131125002319) do
+ActiveRecord::Schema.define(version: 20131126015017) do
+
+  create_table "courts", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "forums", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "judicial_districts", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -50,6 +62,12 @@ ActiveRecord::Schema.define(version: 20131125002319) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "office_id"
+  end
+
+  create_table "subjects", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
