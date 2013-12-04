@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131126015017) do
+ActiveRecord::Schema.define(version: 20131203235145) do
+
+  create_table "causes", force: true do |t|
+    t.string   "nome"
+    t.decimal  "value",                precision: 10, scale: 0
+    t.date     "distribution_date"
+    t.integer  "forum_id"
+    t.integer  "subject_id"
+    t.integer  "court_id"
+    t.integer  "judicial_district_id"
+    t.integer  "office_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "courts", force: true do |t|
     t.string   "name"
