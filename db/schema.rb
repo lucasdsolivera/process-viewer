@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131203235145) do
+ActiveRecord::Schema.define(version: 20131209012833) do
 
   create_table "causes", force: true do |t|
     t.string   "nome"
@@ -24,6 +24,11 @@ ActiveRecord::Schema.define(version: 20131203235145) do
     t.integer  "office_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "causes_requirers", force: true do |t|
+    t.integer "cause_id"
+    t.integer "requirer_id"
   end
 
   create_table "courts", force: true do |t|
@@ -40,6 +45,14 @@ ActiveRecord::Schema.define(version: 20131203235145) do
 
   create_table "judicial_districts", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "movimentations", force: true do |t|
+    t.string   "description"
+    t.date     "movimentation_date"
+    t.integer  "cause_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

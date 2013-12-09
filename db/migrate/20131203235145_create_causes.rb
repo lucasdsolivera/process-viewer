@@ -13,5 +13,10 @@ class CreateCauses < ActiveRecord::Migration
       t.timestamps
     end
 
+    create_table :causes_requirers do |t|
+      t.belongs_to :cause
+      t.belongs_to :requirer
+    end
+
   end
 end
