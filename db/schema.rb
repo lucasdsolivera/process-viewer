@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20131209012833) do
 
   create_table "causes", force: true do |t|
-    t.string   "nome"
+    t.string   "name"
     t.decimal  "value",                precision: 10, scale: 0
     t.date     "distribution_date"
     t.integer  "forum_id"

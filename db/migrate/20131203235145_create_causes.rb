@@ -1,7 +1,7 @@
 class CreateCauses < ActiveRecord::Migration
   def change
     create_table :causes do |t|
-      t.string :nome
+      t.string :name
       t.decimal :value
       t.date :distribution_date
       t.belongs_to :forum
