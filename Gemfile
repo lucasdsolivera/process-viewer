@@ -18,6 +18,8 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'rails_admin'
+
 group :test, :development do
     gem 'rspec-rails', '~> 2.4'
     gem 'shoulda-matchers'
@@ -43,3 +45,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+gem "devise"

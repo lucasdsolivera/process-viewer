@@ -4,7 +4,6 @@ class Requirer < ActiveRecord::Base
 
 	has_and_belongs_to_many :causes
 
-	validates_presence_of :person
 	validates_presence_of :office
 
 end
