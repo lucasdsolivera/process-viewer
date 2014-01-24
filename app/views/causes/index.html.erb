@@ -1,0 +1,21 @@
+<h1>Lista de Processos</h1>
+ 
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Data</th>
+    <th>Assunto</th>
+    <th></th>
+  </tr>
+ 
+<% @causes.each do |cause| %>
+  <tr>
+    <td><%= cause.name %></td>
+    <td><%= cause.distribution_date %></td>
+    <td><%= cause.subject.name %></td>
+    <td><%= link_to "Show", cause %></td>
+  </tr>
+<% end %>
+</table>
+ 
+<br />

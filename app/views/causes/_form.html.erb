@@ -1,0 +1,28 @@
+<%= form_for @cause, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :nome, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <%= f.label :valor, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :value, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :data_da_distribuição, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :distribution_date, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                causes_path, :class => 'btn' %>
+  </div>
+<% end %>
