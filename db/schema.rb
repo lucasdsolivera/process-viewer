@@ -13,9 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20140107020009) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "causes", force: true do |t|
     t.string   "name"
-    t.decimal  "value",                precision: 10, scale: 0
+    t.decimal  "value"
     t.date     "distribution_date"
     t.integer  "forum_id"
     t.integer  "subject_id"
