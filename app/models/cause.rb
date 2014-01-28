@@ -9,4 +9,6 @@ class Cause < ActiveRecord::Base
       has_many :movimentations
 
       validates_presence_of :subject, :court, :forum, :judicial_district, :office, :name, :distribution_date
+
+   
 end

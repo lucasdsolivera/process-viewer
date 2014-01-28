@@ -8,6 +8,4 @@ resources :people
 
 resources :causes
 
-
-
 end
