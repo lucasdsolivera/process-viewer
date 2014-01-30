@@ -5,8 +5,6 @@ class CreatePeople < ActiveRecord::Migration
       t.date :birth_date
       t.string :person_type
       t.string :user_type
-      t.string :password
-      t.string :email
 
       t.timestamps
     end
